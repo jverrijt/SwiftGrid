@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D634C8DC1B1EE1B800198097 /* kitten_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D634C8D91B1EE1B800198097 /* kitten_6.jpg */; };
+		D634C8DD1B1EE1B800198097 /* kitten_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D634C8DA1B1EE1B800198097 /* kitten_7.jpg */; };
+		D634C8DE1B1EE1B800198097 /* kitten_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D634C8DB1B1EE1B800198097 /* kitten_5.jpg */; };
+		D668CD691B16EDD500FD6741 /* kitten_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D668CD641B16EDD500FD6741 /* kitten_0.jpg */; };
+		D668CD6A1B16EDD500FD6741 /* kitten_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D668CD651B16EDD500FD6741 /* kitten_1.jpg */; };
+		D668CD6B1B16EDD500FD6741 /* kitten_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D668CD661B16EDD500FD6741 /* kitten_2.jpg */; };
+		D668CD6C1B16EDD500FD6741 /* kitten_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D668CD671B16EDD500FD6741 /* kitten_3.jpg */; };
+		D668CD6D1B16EDD500FD6741 /* kitten_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D668CD681B16EDD500FD6741 /* kitten_4.jpg */; };
+		D66F6C191AC185E500411F12 /* SwiftGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D8861AB9ACE300ADC6FA /* SwiftGridContentView.swift */; };
+		D66F6C1A1AC1863C00411F12 /* SwiftGridTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D8881AB9ACFD00ADC6FA /* SwiftGridTile.swift */; };
+		D6C2D8651AB9AAF400ADC6FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D8641AB9AAF400ADC6FA /* AppDelegate.swift */; };
+		D6C2D8671AB9AAF400ADC6FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D8661AB9AAF400ADC6FA /* ViewController.swift */; };
+		D6C2D86A1AB9AAF400ADC6FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C2D8681AB9AAF400ADC6FA /* Main.storyboard */; };
+		D6C2D86C1AB9AAF400ADC6FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C2D86B1AB9AAF400ADC6FA /* Images.xcassets */; };
+		D6C2D86F1AB9AAF400ADC6FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C2D86D1AB9AAF400ADC6FA /* LaunchScreen.xib */; };
+		D6C2D87B1AB9AAF400ADC6FA /* SwiftGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D87A1AB9AAF400ADC6FA /* SwiftGridTests.swift */; };
+		D6C2D8871AB9ACE300ADC6FA /* SwiftGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D8861AB9ACE300ADC6FA /* SwiftGridContentView.swift */; };
+		D6C2D8891AB9ACFD00ADC6FA /* SwiftGridTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D8881AB9ACFD00ADC6FA /* SwiftGridTile.swift */; };
+		D6C2D88B1AB9B5AB00ADC6FA /* SwiftGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D88A1AB9B5AB00ADC6FA /* SwiftGridView.swift */; };
+		D6D390591ACC35E100CCBE0B /* SwiftGridUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D390581ACC35E100CCBE0B /* SwiftGridUtil.swift */; };
+		D6D3905A1ACC38E800CCBE0B /* SwiftGridUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D390581ACC35E100CCBE0B /* SwiftGridUtil.swift */; };
+		D6FCFB891B0CBFE600442E57 /* SwiftGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2D88A1AB9B5AB00ADC6FA /* SwiftGridView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6C2D8751AB9AAF400ADC6FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6C2D8571AB9AAF400ADC6FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6C2D85E1AB9AAF400ADC6FA;
+			remoteInfo = SwiftGrid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D634C8D91B1EE1B800198097 /* kitten_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_6.jpg; sourceTree = "<group>"; };
+		D634C8DA1B1EE1B800198097 /* kitten_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_7.jpg; sourceTree = "<group>"; };
+		D634C8DB1B1EE1B800198097 /* kitten_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_5.jpg; sourceTree = "<group>"; };
+		D668CD641B16EDD500FD6741 /* kitten_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_0.jpg; sourceTree = "<group>"; };
+		D668CD651B16EDD500FD6741 /* kitten_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_1.jpg; sourceTree = "<group>"; };
+		D668CD661B16EDD500FD6741 /* kitten_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_2.jpg; sourceTree = "<group>"; };
+		D668CD671B16EDD500FD6741 /* kitten_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_3.jpg; sourceTree = "<group>"; };
+		D668CD681B16EDD500FD6741 /* kitten_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten_4.jpg; sourceTree = "<group>"; };
+		D6C2D85F1AB9AAF400ADC6FA /* SwiftGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6C2D8631AB9AAF400ADC6FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C2D8641AB9AAF400ADC6FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6C2D8661AB9AAF400ADC6FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6C2D8691AB9AAF400ADC6FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6C2D86B1AB9AAF400ADC6FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D6C2D86E1AB9AAF400ADC6FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D6C2D8741AB9AAF400ADC6FA /* SwiftGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6C2D8791AB9AAF400ADC6FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C2D87A1AB9AAF400ADC6FA /* SwiftGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGridTests.swift; sourceTree = "<group>"; };
+		D6C2D8861AB9ACE300ADC6FA /* SwiftGridContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGridContentView.swift; sourceTree = "<group>"; };
+		D6C2D8881AB9ACFD00ADC6FA /* SwiftGridTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGridTile.swift; sourceTree = "<group>"; };
+		D6C2D88A1AB9B5AB00ADC6FA /* SwiftGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGridView.swift; sourceTree = "<group>"; };
+		D6D390581ACC35E100CCBE0B /* SwiftGridUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGridUtil.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6C2D85C1AB9AAF400ADC6FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6C2D8711AB9AAF400ADC6FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D668CD631B16EDD500FD6741 /* Test images */ = {
+			isa = PBXGroup;
+			children = (
+				D634C8D91B1EE1B800198097 /* kitten_6.jpg */,
+				D634C8DA1B1EE1B800198097 /* kitten_7.jpg */,
+				D634C8DB1B1EE1B800198097 /* kitten_5.jpg */,
+				D668CD641B16EDD500FD6741 /* kitten_0.jpg */,
+				D668CD651B16EDD500FD6741 /* kitten_1.jpg */,
+				D668CD661B16EDD500FD6741 /* kitten_2.jpg */,
+				D668CD671B16EDD500FD6741 /* kitten_3.jpg */,
+				D668CD681B16EDD500FD6741 /* kitten_4.jpg */,
+			);
+			path = "Test images";
+			sourceTree = "<group>";
+		};
+		D6C2D8561AB9AAF400ADC6FA = {
+			isa = PBXGroup;
+			children = (
+				D6C2D8611AB9AAF400ADC6FA /* SwiftGrid */,
+				D668CD631B16EDD500FD6741 /* Test images */,
+				D6C2D8771AB9AAF400ADC6FA /* SwiftGridTests */,
+				D6C2D8601AB9AAF400ADC6FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D6C2D8601AB9AAF400ADC6FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2D85F1AB9AAF400ADC6FA /* SwiftGrid.app */,
+				D6C2D8741AB9AAF400ADC6FA /* SwiftGridTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6C2D8611AB9AAF400ADC6FA /* SwiftGrid */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2D8851AB9AB2A00ADC6FA /* SwiftGrid */,
+				D6C2D8641AB9AAF400ADC6FA /* AppDelegate.swift */,
+				D6C2D8661AB9AAF400ADC6FA /* ViewController.swift */,
+				D6C2D8681AB9AAF400ADC6FA /* Main.storyboard */,
+				D6C2D86B1AB9AAF400ADC6FA /* Images.xcassets */,
+				D6C2D86D1AB9AAF400ADC6FA /* LaunchScreen.xib */,
+				D6C2D8621AB9AAF400ADC6FA /* Supporting Files */,
+			);
+			path = SwiftGrid;
+			sourceTree = "<group>";
+		};
+		D6C2D8621AB9AAF400ADC6FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2D8631AB9AAF400ADC6FA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6C2D8771AB9AAF400ADC6FA /* SwiftGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2D87A1AB9AAF400ADC6FA /* SwiftGridTests.swift */,
+				D6C2D8781AB9AAF400ADC6FA /* Supporting Files */,
+			);
+			path = SwiftGridTests;
+			sourceTree = "<group>";
+		};
+		D6C2D8781AB9AAF400ADC6FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2D8791AB9AAF400ADC6FA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6C2D8851AB9AB2A00ADC6FA /* SwiftGrid */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2D8861AB9ACE300ADC6FA /* SwiftGridContentView.swift */,
+				D6C2D8881AB9ACFD00ADC6FA /* SwiftGridTile.swift */,
+				D6C2D88A1AB9B5AB00ADC6FA /* SwiftGridView.swift */,
+				D6D390581ACC35E100CCBE0B /* SwiftGridUtil.swift */,
+			);
+			name = SwiftGrid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6C2D85E1AB9AAF400ADC6FA /* SwiftGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6C2D87E1AB9AAF400ADC6FA /* Build configuration list for PBXNativeTarget "SwiftGrid" */;
+			buildPhases = (
+				D6C2D85B1AB9AAF400ADC6FA /* Sources */,
+				D6C2D85C1AB9AAF400ADC6FA /* Frameworks */,
+				D6C2D85D1AB9AAF400ADC6FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGrid;
+			productName = SwiftGrid;
+			productReference = D6C2D85F1AB9AAF400ADC6FA /* SwiftGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6C2D8731AB9AAF400ADC6FA /* SwiftGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6C2D8811AB9AAF400ADC6FA /* Build configuration list for PBXNativeTarget "SwiftGridTests" */;
+			buildPhases = (
+				D6C2D8701AB9AAF400ADC6FA /* Sources */,
+				D6C2D8711AB9AAF400ADC6FA /* Frameworks */,
+				D6C2D8721AB9AAF400ADC6FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6C2D8761AB9AAF400ADC6FA /* PBXTargetDependency */,
+			);
+			name = SwiftGridTests;
+			productName = SwiftGridTests;
+			productReference = D6C2D8741AB9AAF400ADC6FA /* SwiftGridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6C2D8571AB9AAF400ADC6FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Metamotifs;
+				TargetAttributes = {
+					D6C2D85E1AB9AAF400ADC6FA = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					D6C2D8731AB9AAF400ADC6FA = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = D6C2D85E1AB9AAF400ADC6FA;
+					};
+				};
+			};
+			buildConfigurationList = D6C2D85A1AB9AAF400ADC6FA /* Build configuration list for PBXProject "SwiftGrid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6C2D8561AB9AAF400ADC6FA;
+			productRefGroup = D6C2D8601AB9AAF400ADC6FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6C2D85E1AB9AAF400ADC6FA /* SwiftGrid */,
+				D6C2D8731AB9AAF400ADC6FA /* SwiftGridTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6C2D85D1AB9AAF400ADC6FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D668CD691B16EDD500FD6741 /* kitten_0.jpg in Resources */,
+				D6C2D86A1AB9AAF400ADC6FA /* Main.storyboard in Resources */,
+				D6C2D86F1AB9AAF400ADC6FA /* LaunchScreen.xib in Resources */,
+				D668CD6A1B16EDD500FD6741 /* kitten_1.jpg in Resources */,
+				D634C8DD1B1EE1B800198097 /* kitten_7.jpg in Resources */,
+				D668CD6D1B16EDD500FD6741 /* kitten_4.jpg in Resources */,
+				D634C8DE1B1EE1B800198097 /* kitten_5.jpg in Resources */,
+				D668CD6B1B16EDD500FD6741 /* kitten_2.jpg in Resources */,
+				D634C8DC1B1EE1B800198097 /* kitten_6.jpg in Resources */,
+				D6C2D86C1AB9AAF400ADC6FA /* Images.xcassets in Resources */,
+				D668CD6C1B16EDD500FD6741 /* kitten_3.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6C2D8721AB9AAF400ADC6FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6C2D85B1AB9AAF400ADC6FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C2D8671AB9AAF400ADC6FA /* ViewController.swift in Sources */,
+				D6C2D8871AB9ACE300ADC6FA /* SwiftGridContentView.swift in Sources */,
+				D6C2D88B1AB9B5AB00ADC6FA /* SwiftGridView.swift in Sources */,
+				D6D390591ACC35E100CCBE0B /* SwiftGridUtil.swift in Sources */,
+				D6C2D8651AB9AAF400ADC6FA /* AppDelegate.swift in Sources */,
+				D6C2D8891AB9ACFD00ADC6FA /* SwiftGridTile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6C2D8701AB9AAF400ADC6FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66F6C191AC185E500411F12 /* SwiftGridContentView.swift in Sources */,
+				D66F6C1A1AC1863C00411F12 /* SwiftGridTile.swift in Sources */,
+				D6FCFB891B0CBFE600442E57 /* SwiftGridView.swift in Sources */,
+				D6C2D87B1AB9AAF400ADC6FA /* SwiftGridTests.swift in Sources */,
+				D6D3905A1ACC38E800CCBE0B /* SwiftGridUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6C2D8761AB9AAF400ADC6FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6C2D85E1AB9AAF400ADC6FA /* SwiftGrid */;
+			targetProxy = D6C2D8751AB9AAF400ADC6FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D6C2D8681AB9AAF400ADC6FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6C2D8691AB9AAF400ADC6FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D6C2D86D1AB9AAF400ADC6FA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6C2D86E1AB9AAF400ADC6FA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6C2D87C1AB9AAF400ADC6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6C2D87D1AB9AAF400ADC6FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6C2D87F1AB9AAF400ADC6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				INFOPLIST_FILE = SwiftGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D6C2D8801AB9AAF400ADC6FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				INFOPLIST_FILE = SwiftGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D6C2D8821AB9AAF400ADC6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftGrid.app/SwiftGrid";
+			};
+			name = Debug;
+		};
+		D6C2D8831AB9AAF400ADC6FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftGrid.app/SwiftGrid";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6C2D85A1AB9AAF400ADC6FA /* Build configuration list for PBXProject "SwiftGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6C2D87C1AB9AAF400ADC6FA /* Debug */,
+				D6C2D87D1AB9AAF400ADC6FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6C2D87E1AB9AAF400ADC6FA /* Build configuration list for PBXNativeTarget "SwiftGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6C2D87F1AB9AAF400ADC6FA /* Debug */,
+				D6C2D8801AB9AAF400ADC6FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6C2D8811AB9AAF400ADC6FA /* Build configuration list for PBXNativeTarget "SwiftGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6C2D8821AB9AAF400ADC6FA /* Debug */,
+				D6C2D8831AB9AAF400ADC6FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6C2D8571AB9AAF400ADC6FA /* Project object */;
+}
