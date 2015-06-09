@@ -73,6 +73,12 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     
     /**
     */
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    /**
+    */
     func orientationChanged()
     {
         if let cv = contentView {

@@ -25,10 +25,10 @@ gridView.removeTile(tile)
 gridView.addTile(tile, position: GridPosition(row: 2, col: 3))
 ```
 
-`ViewController.swift` contains a more in-depth example.
+See `ViewController.swift` for a more in-depth example.
 
 ## Contribute
 
-Improvements to utility and performance of the code is ongoing. Any suggestion on how to improve SwiftGrid are very much appreciated. 
+Improvements to utility and performance of the code is ongoing. Suggestions on how to improve SwiftGrid are very much appreciated. 
 
 This code was originally created by Joost Verrijt and licensed under the MIT license. See LICENSE for details.
