@@ -16,8 +16,8 @@ class SwiftGridTests: XCTestCase
     override func setUp() {
         super.setUp()
         
-        gridView = SwiftGridContentView(frame: CGRectMake(0.0, 0.0, 768.0, 1024.0))
-        gridView.cellSize = CGSizeMake(100.0, 100.0);
+        gridView = SwiftGridContentView(frame: CGRect(x: 0.0, y: 0.0, width: 768.0, height: 1024.0))
+        gridView.cellSize = CGSize(width: 100.0, height: 100.0);
 
     }
     
@@ -31,21 +31,21 @@ class SwiftGridTests: XCTestCase
     {
         // With a width of 768 pixels and a cell size of 100x100, there should be 7 columns.
         XCTAssertEqual(gridView.cols, 7, "rows should be 7, is \(gridView.cols)");
-        gridView.cellSize = CGSizeMake(10.0, 10.0);
+        gridView.cellSize = CGSize(width: 10.0, height: 10.0);
         XCTAssertEqual(gridView.cols, 76, "rows should be 76, is \(gridView.cols)");
     }
     
     func testGridPositionStruct()
     {
-        var pos1 = GridPosition(row: 1, col: 1)
-        var pos2 = GridPosition(row: 2, col: 3)
-        var pos3 = GridPosition(row: 1, col: 1)
+        let pos1 = GridPosition(row: 1, col: 1)
+        let pos2 = GridPosition(row: 2, col: 3)
+        let pos3 = GridPosition(row: 1, col: 1)
         
         XCTAssertEqual(pos1, pos3, "Pos1 and ps3 are equal")
         XCTAssertFalse(pos1 == pos2, "Pos1 and pos2 are not equal")
         
-        var pos = GridPosition(row: 1, col: 2)
-        println("value: \(pos.description)")
+        let pos = GridPosition(row: 1, col: 2)
+        print("value: \(pos.description)")
         
         // NSLog("%@", pos)
     }
@@ -55,12 +55,12 @@ class SwiftGridTests: XCTestCase
     */
     func testGridAdd()
     {
-        gridView.cellSize = CGSizeMake(100.0, 100.0);
+        gridView.cellSize = CGSize(width: 100.0, height: 100.0);
         
-        var tile = SwiftGridTile(size: TileSize(rows: 2, cols: 2))
-        var tile2 = SwiftGridTile(size: TileSize(rows: 3, cols: 2))
-        var tile3 = SwiftGridTile(size: TileSize(rows: 4, cols: 4))
-        var tile4 = SwiftGridTile(size: TileSize(rows: 4, cols: 4))
+        let tile = SwiftGridTile(size: TileSize(rows: 2, cols: 2))
+        let tile2 = SwiftGridTile(size: TileSize(rows: 3, cols: 2))
+        let tile3 = SwiftGridTile(size: TileSize(rows: 4, cols: 4))
+        _ = SwiftGridTile(size: TileSize(rows: 4, cols: 4))
         
         XCTAssertTrue(gridView.addTile(tile, position:GridPosition(row:0, col:0)), "Tile was added succesfully")
         XCTAssertFalse(gridView.addTile(tile2, position:GridPosition(row:1, col: 1)), "Tile position illegal!")
@@ -71,11 +71,11 @@ class SwiftGridTests: XCTestCase
     
     func testContentView()
     {
-        gridView.cellSize = CGSizeMake(100.0, 100.0);
+        gridView.cellSize = CGSize(width: 100.0, height: 100.0);
         
-        var imageView = UIImageView(image: UIImage(named: "kitten.jpg"))
+        let imageView = UIImageView(image: UIImage(named: "kitten.jpg"))
         // Create a 2x2 tile and add an image for content. Total tile size will be 200x200 px
-        var tile = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView:imageView)
+        let tile = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView:imageView)
         
         // Add the tile to the grid
         gridView.addTile(tile)

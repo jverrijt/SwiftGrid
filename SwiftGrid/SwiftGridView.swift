@@ -10,9 +10,9 @@ import UIKit
 
 protocol SwiftGridViewDelegate: class
 {
-    func tileWillDrag(tile: SwiftGridTile)
-    func tileDidDrag(tile: SwiftGridTile)
-    func tileEndDrag(tile: SwiftGridTile)
+    func tileWillDrag(_ tile: SwiftGridTile)
+    func tileDidDrag(_ tile: SwiftGridTile)
+    func tileEndDrag(_ tile: SwiftGridTile)
 }
 
 //
@@ -30,7 +30,7 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
             
             if staticPosition == false {
                 // ceil all the tiles.
-                for tile in contentView.tiles.sorted({$0.position.row < $1.position.row}) {
+                for tile in contentView.tiles.sorted(by: {$0.position.row < $1.position.row}) {
                     contentView.ceilTile(tile)
                     contentView.updateTileFrames()
                 }
@@ -41,7 +41,7 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     // Disable / enable dragging
     var locked = false {
         didSet {
-            contentView.userInteractionEnabled = !locked
+            contentView.isUserInteractionEnabled = !locked
         }
     }
     
@@ -54,7 +54,7 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     
     /**
     */
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -63,23 +63,20 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     */
     func commonInit()
     {
-        contentView = SwiftGridContentView(frame: CGRectMake(0.0, 0.0, self.frame.size.width, 0))
+        contentView = SwiftGridContentView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: 0))
         contentView.gridContainer = self
         contentView.backgroundColor = self.backgroundColor
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationChanged",
-            name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
     
     /**
     */
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     /**
     */
-    func orientationChanged()
+    override func layoutSubviews()
     {
         if let cv = contentView {
             var frame = cv.frame
@@ -92,6 +89,7 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
             
             var contentSize = self.contentSize
             contentSize.width = self.frame.width
+            
             self.contentSize = contentSize
             
             if cv.drawDebugGrid {
@@ -102,12 +100,12 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     
     /**
     Set up the grid for a given cell size. 
-    
-    :param: cellSize cell dimensions
+     
+    - parameter cellSize: cell dimensions
     */
-    func drawGrid(cellSize: CGSize)
+    func drawGrid(_ cellSize: CGSize)
     {
-        contentView.frame = CGRectMake(0.0, 0.0, self.frame.size.width, 0)
+        contentView.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: 0)
         contentView.gridContainer = self
         contentView.cellSize = cellSize
         
@@ -120,15 +118,18 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     /**
     As convenience, adds a tile at the next open position in the grid.
     
-    :param: tile The SwiftGridTile to add to the grid
+    - parameter tile: The SwiftGridTile to add to the grid
     */
-    func addTile(tile: SwiftGridTile) -> Bool
+    @discardableResult
+    func addTile(_ tile: SwiftGridTile) -> Bool
     {
         return contentView.addTile(tile)
     }
     
-    
-    func addTile(tile: SwiftGridTile, position: GridPosition) -> Bool
+    /**
+    */
+    @discardableResult
+    func addTile(_ tile: SwiftGridTile, position: GridPosition) -> Bool
     {
         return contentView.addTile(tile, position: position)
     }
@@ -137,7 +138,7 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     
     /**
     */
-    func tileWillDrag(tile: SwiftGridTile)
+    func tileWillDrag(_ tile: SwiftGridTile)
     {
         if let dg = gridDelegate {
             dg.tileWillDrag(tile)
@@ -146,7 +147,7 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     
     /**
     */
-    func tileDidDrag(tile: SwiftGridTile)
+    func tileDidDrag(_ tile: SwiftGridTile)
     {
         if let dg = gridDelegate {
             dg.tileDidDrag(tile)
@@ -155,7 +156,7 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     
     /**
     */
-    func tileEndDrag(tile: SwiftGridTile)
+    func tileEndDrag(_ tile: SwiftGridTile)
     {
         if let dg = gridDelegate {
             dg.tileEndDrag(tile)
@@ -164,10 +165,10 @@ class SwiftGridView: UIScrollView, SwiftGridViewDelegate
     
     /**
     */
-    func contentViewSizeDidChange(contentView:SwiftGridContentView)
+    func contentViewSizeDidChange(_ contentView:SwiftGridContentView)
     {
-        var oldHeight = self.contentSize.height
-        var newHeight = contentView.frame.size.height
+        let oldHeight = self.contentSize.height
+        let newHeight = contentView.frame.size.height
         
         self.contentSize.height = newHeight
         

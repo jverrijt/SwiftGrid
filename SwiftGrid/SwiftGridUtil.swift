@@ -14,11 +14,11 @@ class SwiftGridUtil: NSObject
     */
     class func randomColor() -> UIColor
     {
-        var hue = CGFloat(Double(arc4random()) % 256 / 256.0)
-        var sat = CGFloat(Double(arc4random()) % 128.0 / 256.0) + 0.5
-        var brt = CGFloat(Double(arc4random()) % 128.0 / 256.0) + 0.5
+        let hue = CGFloat(Double(arc4random()).truncatingRemainder(dividingBy: 256) / 256.0)
+        let sat = CGFloat(Double(arc4random()).truncatingRemainder(dividingBy: 128.0) / 256.0) + 0.5
+        let brt = CGFloat(Double(arc4random()).truncatingRemainder(dividingBy: 128.0) / 256.0) + 0.5
        
-        var color = UIColor(hue: hue, saturation: sat, brightness: brt, alpha: 1.0)
+        let color = UIColor(hue: hue, saturation: sat, brightness: brt, alpha: 1.0)
         
         return color
     }
@@ -26,18 +26,18 @@ class SwiftGridUtil: NSObject
     /**
     Draw the grid and the tiles for debug purposes
     */
-    class func drawDebugGrid(rect: CGRect, contentView: SwiftGridContentView)
+    class func drawDebugGrid(_ rect: CGRect, contentView: SwiftGridContentView)
     {
-        var ctx = UIGraphicsGetCurrentContext()
+        let ctx = UIGraphicsGetCurrentContext()
         
-        CGContextClearRect(ctx, rect)
+        ctx?.clear(rect)
         
-        UIColor.whiteColor().setFill()
-        CGContextFillRect(ctx, rect)
+        UIColor.white.setFill()
+        ctx?.fill(rect)
         
         var row = 0, col = 0
         // center the grid
-        var xOffset = (rect.size.width - floor(rect.size.width / contentView.cellSize.width)
+        let xOffset = (rect.size.width - floor(rect.size.width / contentView.cellSize.width)
             * contentView.cellSize.width) / 2
         
         var x:CGFloat = xOffset, y:CGFloat = 0.0
@@ -47,7 +47,7 @@ class SwiftGridUtil: NSObject
                 y += contentView.cellSize.height
                 x = xOffset
                 col = 0
-                row++
+                row += 1
             }
             
             if row >= contentView.rows {
@@ -55,8 +55,8 @@ class SwiftGridUtil: NSObject
             }
             
             contentView.gridOutlineColor.setStroke()
-            CGContextSetLineWidth(ctx, contentView.gridOutlineLineWidth);
-            CGContextStrokeRect(ctx, CGRectMake(x, y, contentView.cellSize.width, contentView.cellSize.height));
+            ctx?.setLineWidth(contentView.gridOutlineLineWidth);
+            ctx?.stroke(CGRect(x: x, y: y, width: contentView.cellSize.width, height: contentView.cellSize.height));
             
             if let debugTile = contentView.tile(atPosition: GridPosition(row: row, col: col)) {
                 
@@ -67,14 +67,14 @@ class SwiftGridUtil: NSObject
                 debugTile.debugColor?.setFill()
                 
             } else {
-                UIColor.whiteColor().setFill()
+                UIColor.white.setFill()
             }
             
-            var tileRect = CGRectMake(x, y, contentView.cellSize.width, contentView.cellSize.height)
-            CGContextFillRect(ctx, CGRectInset(tileRect, 4.0, 4.0))
+            let tileRect = CGRect(x: x, y: y, width: contentView.cellSize.width, height: contentView.cellSize.height)
+            ctx?.fill(tileRect.insetBy(dx: 4.0, dy: 4.0))
             
             x += contentView.cellSize.width;
-            col++
+            col += 1
         }
     }
 }

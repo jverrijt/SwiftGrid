@@ -23,23 +23,21 @@ class ViewController: UIViewController
     
     /**
     */
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         gridView.contentInset = UIEdgeInsets(top: toolbar!.bounds.height + 5.0, left: 0, bottom: 10.0, right: 0)
         
         // Render larger tiles on iPads
-        if UIDevice.currentDevice().model.hasPrefix("iPad") {
-            gridView.drawGrid(CGSizeMake(75.0, 75.0))
+        if UIDevice.current.model.hasPrefix("iPad") {
+            gridView.drawGrid(CGSize(width: 75.0, height: 75.0))
         } else {
-            gridView.drawGrid(CGSizeMake(50.0, 50.0))
+            gridView.drawGrid(CGSize(width: 50.0, height: 50.0))
         }
 
         gridView.contentView?.drawDebugGrid = false
         gridView.locked = false
         
-        addDemoTiles()
-        // addRandomTiles(100)
-        // addStaticTiles()
+        addDemoTiles();
     }
 
     /**
@@ -53,15 +51,15 @@ class ViewController: UIViewController
     */
     func addDemoTiles()
     {
-        var tile = SwiftGridTile(size: TileSize(rows: 2, cols: 4), contentView: randomImageView())
-        var tile2 = SwiftGridTile(size: TileSize(rows: 4, cols: 4), contentView: randomImageView())
-        var tile3 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
-        var tile4 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
-        var tile5 = SwiftGridTile(size: TileSize(rows: 4, cols: 2), contentView: randomImageView())
-        var tile6 = SwiftGridTile(size: TileSize(rows: 2, cols: 4), contentView: randomImageView())
-        var tile7 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
-        var tile8 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
-        var tile9 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
+        let tile = SwiftGridTile(size: TileSize(rows: 2, cols: 4), contentView: randomImageView())
+        let tile2 = SwiftGridTile(size: TileSize(rows: 4, cols: 4), contentView: randomImageView())
+        let tile3 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
+        let tile4 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
+        let tile5 = SwiftGridTile(size: TileSize(rows: 4, cols: 2), contentView: randomImageView())
+        let tile6 = SwiftGridTile(size: TileSize(rows: 2, cols: 4), contentView: randomImageView())
+        let tile7 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
+        let tile8 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
+        let tile9 = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
         
         gridView?.addTile(tile)
         gridView?.addTile(tile2)
@@ -81,9 +79,9 @@ class ViewController: UIViewController
     {
         gridView.staticPosition = true
         
-        var tile = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
-        var tile2 = SwiftGridTile(size: TileSize(rows: 3, cols: 2), contentView: randomImageView())
-        var tile3 = SwiftGridTile(size: TileSize(rows: 4, cols: 4), contentView: randomImageView())
+        let tile = SwiftGridTile(size: TileSize(rows: 2, cols: 2), contentView: randomImageView())
+        let tile2 = SwiftGridTile(size: TileSize(rows: 3, cols: 2), contentView: randomImageView())
+        let tile3 = SwiftGridTile(size: TileSize(rows: 4, cols: 4), contentView: randomImageView())
         
         gridView.addTile(tile, position:GridPosition(row:0, col:0))
         gridView.addTile(tile2, position:GridPosition(row:1, col: 2))
@@ -93,17 +91,17 @@ class ViewController: UIViewController
     /**
     Add a bunch of random tiles. Useful for performance tests
     */
-    func addRandomTiles(nrOfTiles: Int)
+    func addRandomTiles(_ nrOfTiles: Int)
     {
-        for i in 1...nrOfTiles {
+        for _ in 1...nrOfTiles {
             var rs = arc4random() % 4
 
             if rs < 1 {
                 rs += 1
             }
             
-            var size = TileSize(rows:Int(rs), cols:Int(rs))
-            var tile = SwiftGridTile(size: size, contentView: randomImageView())
+            let size = TileSize(rows:Int(rs), cols:Int(rs))
+            let tile = SwiftGridTile(size: size, contentView: randomImageView())
             
             gridView?.addTile(tile)
         }
@@ -114,11 +112,11 @@ class ViewController: UIViewController
     */
     func randomImageView() -> UIImageView
     {
-        var r = arc4random() % 8
-        var str = NSBundle.mainBundle().pathForResource("kitten_\(r)", ofType: "jpg")
-        var v = UIImageView(image: UIImage(contentsOfFile: str!))
+        let r = arc4random() % 8
+        let str = Bundle.main.path(forResource: "kitten_\(r)", ofType: "jpg")
+        let v = UIImageView(image: UIImage(contentsOfFile: str!))
         v.clipsToBounds = true
-        v.contentMode = UIViewContentMode.ScaleAspectFill
+        v.contentMode = UIViewContentMode.scaleAspectFill
         
         return v
     }
@@ -127,27 +125,27 @@ class ViewController: UIViewController
     */
     @IBAction func addTile()
     {
-        var tile = SwiftGridTile(size: TileSize(rows: rowField!.text.toInt()!, cols: colField!.text.toInt()!),
+        let tile = SwiftGridTile(size: TileSize(rows: Int(rowField!.text!)!, cols: Int(colField!.text!)!),
             contentView: randomImageView())
         
         if gridView?.addTile(tile) == false {
-            println("Tile out of bounds")
+            print("Tile out of bounds")
         }
     }
     
-    @IBAction func debugToggled(toggle: UISwitch)
+    @IBAction func debugToggled(_ toggle: UISwitch)
     {
-        gridView.contentView.drawDebugGrid = toggle.on
+        gridView.contentView.drawDebugGrid = toggle.isOn
         for tile in gridView.contentView.tiles {
-            tile.alpha = toggle.on ? 0.6 : 1.0
+            tile.alpha = toggle.isOn ? 0.6 : 1.0
         }
         
         gridView.contentView.setNeedsDisplay()
     }
     
-    @IBAction func freeDragToggled(toggle: UISwitch)
+    @IBAction func freeDragToggled(_ toggle: UISwitch)
     {
-        gridView.staticPosition = toggle.on
+        gridView.staticPosition = toggle.isOn
     }
 }
 

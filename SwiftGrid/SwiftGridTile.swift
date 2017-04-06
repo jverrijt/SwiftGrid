@@ -11,7 +11,7 @@ import UIKit
 //
 //
 //
-struct TileSize : Printable
+struct TileSize : CustomStringConvertible
 {
     var rows: Int = 0
     var cols: Int = 0
@@ -24,7 +24,7 @@ struct TileSize : Printable
 //
 //
 //
-struct GridPosition : Hashable, Printable
+struct GridPosition : Hashable, CustomStringConvertible
 {
     var row: Int
     var col: Int
@@ -48,7 +48,7 @@ func == (el: GridPosition, er: GridPosition) -> Bool {
 //
 //
 //
-class SwiftGridTile: UIView, Printable
+class SwiftGridTile: UIView
 {
     var needsFrameUpdate: Bool = false
     var oldPosition: GridPosition?
@@ -68,7 +68,7 @@ class SwiftGridTile: UIView, Printable
 
     var debugColor: UIColor?
     
-    private var _contentView: UIView?
+    fileprivate var _contentView: UIView?
     var contentView: UIView? {
         get {
             return _contentView
@@ -94,14 +94,14 @@ class SwiftGridTile: UIView, Printable
     */
     init(size: TileSize)
     {
-        super.init(frame: CGRectMake(0, 0, 0, 0))
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.size = size
     }
     
     /**
     */
     init(size: TileSize, contentView: UIView) {
-        super.init(frame: CGRectMake(0, 0, 0, 0))
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.size = size
         self.contentView = contentView
         
@@ -111,14 +111,14 @@ class SwiftGridTile: UIView, Printable
     /**
     */
     init(position: GridPosition, size: TileSize) {
-        super.init(frame: CGRectMake(0, 0, 0, 0))
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.size = size
         self.position = position
     }
     
     /**
     */
-    required init(coder aDecoder: NSCoder)
+    required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
         self.autoresizesSubviews = true
@@ -127,12 +127,12 @@ class SwiftGridTile: UIView, Printable
     /**
     Returns true if the given tile intersects with this tile.
     */
-    func colidesWithTile(tile: SwiftGridTile) -> Bool
+    func colidesWithTile(_ tile: SwiftGridTile) -> Bool
     {
-        var r1 = self.asRect(CGSize(width: 10.0, height: 10.0))
-        var r2 = tile.asRect(CGSize(width: 10.0, height: 10.0))
+        let r1 = self.asRect(CGSize(width: 10.0, height: 10.0))
+        let r2 = tile.asRect(CGSize(width: 10.0, height: 10.0))
         
-        if (CGRectIntersectsRect(r1, r2)) {
+        if (r1.intersects(r2)) {
             return true
         }
         
@@ -141,12 +141,12 @@ class SwiftGridTile: UIView, Printable
     
     /**
     */
-    func colidesWithTile(position: GridPosition, size:TileSize) -> Bool
+    func colidesWithTile(_ position: GridPosition, size:TileSize) -> Bool
     {
-        var r1 = rectForPosition(self.position, size: self.size, cellSize: CGSizeMake(10.0, 10.0))
-        var r2 = rectForPosition(position, size: size, cellSize: CGSizeMake(10.0, 10.0))
+        let r1 = rectForPosition(self.position, size: self.size, cellSize: CGSize(width: 10.0, height: 10.0))
+        let r2 = rectForPosition(position, size: size, cellSize: CGSize(width: 10.0, height: 10.0))
         
-        if (CGRectIntersectsRect(r1, r2)) {
+        if (r1.intersects(r2)) {
             return true
         }
         
@@ -184,15 +184,15 @@ class SwiftGridTile: UIView, Printable
     
     /**
     */
-    func rectForPosition(position: GridPosition, size: TileSize, cellSize: CGSize) -> CGRect
+    func rectForPosition(_ position: GridPosition, size: TileSize, cellSize: CGSize) -> CGRect
     {
-        return CGRectMake(CGFloat(position.col) * cellSize.width, CGFloat(position.row) * cellSize.height,
-            CGFloat(size.cols) * cellSize.width, CGFloat(size.rows) * cellSize.height);
+        return CGRect(x: CGFloat(position.col) * cellSize.width, y: CGFloat(position.row) * cellSize.height,
+            width: CGFloat(size.cols) * cellSize.width, height: CGFloat(size.rows) * cellSize.height);
     }
     
     /**
     */
-    func asRect(cellSize: CGSize) -> CGRect
+    func asRect(_ cellSize: CGSize) -> CGRect
     {
         return rectForPosition(position, size: size, cellSize: cellSize)
     }
